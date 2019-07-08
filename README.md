@@ -1,2 +1,2 @@
-# SmartCity
+# Smart City
 Exploration data science
