@@ -4,7 +4,6 @@ StopSpot is a project to focuse on the quality assurance of static transit stop 
 # Development
 Developed by: Hui-Yu Sim, Marcus Kwong, Brian Allen, Tarun Singh
 
-# Feature
-
-
+# MidPoint Report 
+https://github.com/hui2018/SmartCity_StopSpot/blob/master/MidPoint%20Report.pdf
 
