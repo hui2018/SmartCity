@@ -9,9 +9,8 @@ from scipy import stats
 def main():
     conn = a.connect()
 
-
     cursor = conn.cursor()
-    postgreSQL_select_Query = "select * from ctran_march"
+    postgreSQL_select_Query = "select * from ctran order by location_id"
     cursor.execute(postgreSQL_select_Query)
     result = cursor.fetchall()
     '''
@@ -24,26 +23,25 @@ def main():
     b = []
     c = []
     for row in result:
-        if(row[1] == 2):
-            continue
-        b.append(row[3])
-        c.append(row[4])
+        b.append(row[22])
+        c.append(row[23])
         #plt.scatter(row[22],row[23], c="b")
 
     cursor1 = conn.cursor()
-    postgreSQL_select_Query1 = "select * from ctran_march_static"
+    postgreSQL_select_Query1 = "select * from ctran_static"
     cursor1.execute(postgreSQL_select_Query1)
     result1 = cursor1.fetchall()
     d =[]
     e=[]
     t = np.arange(cursor1.rowcount)
     for row in result1:
-        d.append(row[4])
-        e.append(row[3])
+        d.append(row[5])
+        e.append(row[4])
 
-    plt.scatter(b,c,c="r")
-    plt.scatter(d,e,c=t, edgecolors="black")
-    plt.show()
+    #plt.scatter(b,c,c="r")
+    #plt.scatter(d,e,c=t, edgecolors="black")
+    #plt.show()
+    stats.ttest_rel(b,c)
 
 if __name__ == "__main__":
     main()
