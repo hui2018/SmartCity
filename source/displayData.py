@@ -26,8 +26,8 @@ def main():
     for row in result:
         if(row[1] == 2):
             continue
-        b.append(row[3])
-        c.append(row[4])
+        b.append(row[22])
+        c.append(row[23])
         #plt.scatter(row[22],row[23], c="b")
 
     cursor1 = conn.cursor()
