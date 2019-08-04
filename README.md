@@ -9,7 +9,7 @@ https://github.com/hui2018/SmartCity_StopSpot/blob/master/MidPoint%20Report.pdf
 
 # Delivery
 Our delivery to the Ctran is a report with a list of top stop locations that the bus does not stop at the stop location within 30ft.
-Some of our analysis including checking the average and median of the distances if both are within 30ft, then we want to flag it as a problematic stop for Ctran to take a look at.
+Some of our analysis including checking the average and median of the distances if both are not within 30ft, then we want to flag it as a problematic stop for Ctran to take a look at.
 
 # Backlog
 There are number of ideas our team has come up with
