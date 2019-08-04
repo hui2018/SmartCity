@@ -1,3 +1,4 @@
+import csv
 import pandas as pd
 from operator import itemgetter
 
@@ -26,3 +27,9 @@ for x in list:
     print(x)
 
 
+with open('C:\\Users\\Jack\\Desktop\\DataScience\\Ctran\\output.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['location_id','average', 'median'])
+    for x in list:
+        writer.writerow(x)
+file.close()
