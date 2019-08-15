@@ -4,7 +4,7 @@ from operator import itemgetter
 
 def outputCSV():
     '''load csv and sort the location_id for both mean and medium so we can do do the calculation in a for loop'''
-    data = pd.read_csv('C:\\Users\\Jack\\Desktop\\DataScience\\Ctran\\ctran_trips_data.csv')
+    data = pd.read_csv('C:\\Users\\jackc\\Desktop\\ctran\\ctran_trips_data.csv')
     df = data.groupby('location_id')['location_distance'].mean()
     result = df.sort_index(ascending=False)
 
@@ -28,7 +28,7 @@ def outputCSV():
         #print(x)
 
 
-    with open('C:\\Users\\Jack\\Desktop\\DataScience\\Ctran\\output.csv', mode='w', newline='') as file:
+    with open('C:\\Users\\jackc\\Desktop\\ctran\\output.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['location_id','average', 'median'])
         for x in list:

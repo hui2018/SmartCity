@@ -4,7 +4,7 @@ from operator import itemgetter
 from scipy import stats
 def pvalue():
     '''load csv and sort the location_id for both mean and medium so we can do do the calculation in a for loop'''
-    data = pd.read_csv('C:\\Users\\Jack\\Desktop\\DataScience\\Ctran\\data_merge.csv')
+    data = pd.read_csv('C:\\Users\\Jackc\\Desktop\\Ctran\\dataMerge.csv')
     df = data.groupby('location_id')
     pvalueList = []
     for x,y in df:
@@ -13,7 +13,7 @@ def pvalue():
 
     pvalueList = sorted(pvalueList, key=itemgetter(2), reverse=False)
 
-    with open('C:\\Users\\Jack\\Desktop\\DataScience\\Ctran\\outputpValue.csv', mode='w', newline='') as file:
+    with open('C:\\Users\\Jackc\\Desktop\\Ctran\\outputpValue.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['location_id', 'x_statistics','x_p-value', 'y_statistics', 'y_p-value'])
         for x in pvalueList:
