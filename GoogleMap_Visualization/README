@@ -1,0 +1,10 @@
+README
+
+load_csv2.py
+
+This file takes in a .csv file with specific attribute list and is used to access attributes as arrays.
+
+cluster2.py
+
+This file takes the stop instances of a .csv file containing a set of stop locations and places it on
+a google maps page. The points on the map resized based on the values passed.
